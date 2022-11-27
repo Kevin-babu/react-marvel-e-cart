@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import LoggedIn from "./components/LoggedIn";
+import Wishlist from "./pages/wishlist";
+import Account from "./pages/Account";
+import Cart from "./pages/Cart";
+import { ShoppingCartProvider } from "./context/CartContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+// const isLoggedIn = true;
+
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <Routes>
+            <Route index element={<LoggedIn />} />
+            <Route path="cart" element={<Cart/>} />
+            <Route path="wishlist" element={<Wishlist />} />
+            <Route path="account" element={<Account />} />
+        </Routes>
+      </BrowserRouter>
+    </ShoppingCartProvider>
+    
+  )
 }
 
 export default App;
+
+
