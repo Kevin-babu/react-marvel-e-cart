@@ -27,7 +27,7 @@ function SpecialProduct(props){
         {quantity === 0?
         <>
         <button className="btn btn-light" onClick={()=>{setIncrement(props.product.id)}} >Add to Cart</button>
-          <button className="btn btn-danger" onClick= {()=>alert("Wishlist " + props.product.name)} >Add to Wishlist</button>
+          <button className="btn btn-danger" onClick= {()=>alert("Wishlist " + props.product.Pname)} >Add to Wishlist</button>
         </>
           :
         <>
