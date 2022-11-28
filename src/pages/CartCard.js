@@ -12,7 +12,7 @@ export default function CartCard(props) {
   return (
       <div className='cart-card'>
         <div className='cart-d'>
-          <img src={props.imgurl}  alt="img" />
+          <img  src={props.imgurl}  alt="img" />
         
           <div className='cart-card-disc'>
               <h4>{props.name}</h4>
