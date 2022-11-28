@@ -15,10 +15,10 @@ function App(){
       <BrowserRouter>
         <Routes>
             <Route index element={<LoggedIn />} />
-            <Route path="react-marvel-e-cart" element={<LoggedIn/>} />
-            <Route path="react-marvel-e-cart/cart" element={<Cart/>} />
-            <Route path="react-marvel-e-cart/wishlist" element={<Wishlist />} />
-            <Route path="react-marvel-e-cart/account" element={<Account />} />
+            <Route exact path="react-marvel-e-cart" component={<LoggedIn/>} />
+            <Route path="react-marvel-e-cart/cart" component={<Cart/>} />
+            <Route path="react-marvel-e-cart/wishlist" component={<Wishlist />} />
+            <Route path="react-marvel-e-cart/account" component={<Account />} />
         </Routes>
       </BrowserRouter>
     </ShoppingCartProvider>
