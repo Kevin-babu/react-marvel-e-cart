@@ -11,7 +11,7 @@ function Navibar(){
           <Navbar.Toggle aria-controls="basic-navbar-nav" />  
           <Navbar.Collapse id="basic-navbar-nav">  
             <Nav className="ms-auto">  
-            <Nav.Link href="/react-marvel-e-cart/cart">
+            <Nav.Link href="/react-marvel-e-cart/#/cart">
             Cart
               <div className="cart-num">
               {cartItems.reduce((value,item) => {
@@ -20,8 +20,8 @@ function Navibar(){
               </div>
             
             </Nav.Link>
-            <Nav.Link href="/react-marvel-e-cart/wishlist">Wishlist</Nav.Link>
-            <Nav.Link href="/react-marvel-e-cart/account">Account</Nav.Link>
+            <Nav.Link href="/react-marvel-e-cart/#/wishlist">Wishlist</Nav.Link>
+            <Nav.Link href="/react-marvel-e-cart/#/account">Account</Nav.Link>
         </Nav>  
       </Navbar.Collapse>  
         </Container>
