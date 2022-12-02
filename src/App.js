@@ -16,9 +16,9 @@ function App(){
         <Routes>
             <Route index element={<LoggedIn />} />
             <Route exact path="react-marvel-e-cart" element={<LoggedIn/>} />
-            <Route exact path="react-marvel-e-cart/#/cart" element={<Cart/>} />
-            <Route exact path="react-marvel-e-cart/#/wishlist" element={<Wishlist />} />
-            <Route exact path="react-marvel-e-cart/#/account" element={<Account />} />
+            <Route exact path="react-marvel-e-cart/cart" element={<Cart/>} />
+            <Route exact path="react-marvel-e-cart/wishlist" element={<Wishlist />} />
+            <Route exact path="react-marvel-e-cart/account" element={<Account />} />
         </Routes>
       </HashRouter>
     </ShoppingCartProvider>
