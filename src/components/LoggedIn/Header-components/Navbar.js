@@ -28,7 +28,7 @@ function Navibar(){
               }, 0)}
               </div>
             </Nav.Link>
-            <Nav.Link href="/#/account">Account</Nav.Link>
+            {/* <Nav.Link href="/#/account">Account</Nav.Link> */}
         </Nav>  
       </Navbar.Collapse>  
         </Container>
