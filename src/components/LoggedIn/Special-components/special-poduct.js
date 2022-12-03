@@ -14,7 +14,6 @@ function SpecialProduct(props){
       setIncrement,
       addToWishlist,
       inWishlist,
-      removeFromWishlist
     } = useShoppingCart()
     
     const quantity= getItemQuantity(props.product.id);
