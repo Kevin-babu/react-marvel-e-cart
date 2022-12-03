@@ -11,10 +11,14 @@ export default function Procard(props) {
     getItemQuantity,
     setIncrement,
     setDecrement,
+    addToWishlist,
+    removeFromWishlist,
+    inWishlist,
   } = useShoppingCart()
 
    
     const quantity= getItemQuantity(props.product.id);
+    const inWish = inWishlist(props.product.id);
   return (
     <Col>
       <Card style={{width: "20rem", color: "black"}} className="mb-3 shadow">
@@ -26,7 +30,11 @@ export default function Procard(props) {
           {quantity === 0 ? 
           <div>
           <Button variant="secondary" onClick={()=>{setIncrement(props.product.id)}}>Add to cart</Button>
-          <Button variant="danger">Wishlist</Button>
+          {/* <Button variant="danger" onClick={()=>addToWishlist(props.product.id)}>Wishlist</Button> */}
+          {inWish === 1 ?
+            <Button variant="danger" onClick={()=>{removeFromWishlist(props.product.id)}}>Wishlisted</Button>
+            :
+             <Button variant="danger" onClick={()=>{addToWishlist(props.product.id)}}>Wishlist</Button>}
           </div>
           :
           <div>

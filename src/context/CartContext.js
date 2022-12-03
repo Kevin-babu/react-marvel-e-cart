@@ -13,13 +13,33 @@ export function ShoppingCartProvider({children}) {
   
   const [cartItems, setCartItems] = useLocalStorage("shopping-cart",   []   )
 
-  
+  const [wishItems, setWishItems] = useLocalStorage("shopping-wishlist",   []   )
   
   const cartQuantity = cartItems.reduce(    (quantity, item) => quantity + item.quantity ,    0  )
 
+  function addToWishlist(id){
+    setWishItems((curr)=>{
+      if(curr.find(item => item.id === id)== null){
+        return[...curr, {id, inWish:1}]
+      }
+    })
+  }
+
+  function removeFromWishlist(id) {
+    setWishItems(currItems => {
+      return currItems.filter(item => item.id !== id)
+    })
+  }
+
+  function inWishlist(id){
+    return (wishItems.find(item => item.id === id))?.inWish || 0 }
   
   function getItemQuantity(id) {
     return (cartItems.find(item => item.id === id))?.quantity || 0 }
+
+  
+  
+
   function setIncrement(id) {
     setCartItems(prevItems => {
       if (prevItems.find(item => item.id === id) == null) {
@@ -64,8 +84,12 @@ export function ShoppingCartProvider({children}) {
         setIncrement,
         setDecrement,
         removeFromCart,
+        addToWishlist,
+        removeFromWishlist,
+        inWishlist,
        
         cartItems,
+        wishItems,
         cartQuantity,
       }}
     >{children}

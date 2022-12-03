@@ -3,7 +3,7 @@ import { Nav, Container, Navbar } from "react-bootstrap";
 import { useShoppingCart } from "../../../context/CartContext";
 
 function Navibar(){
-  const {cartItems} = useShoppingCart()
+  const {cartItems, wishItems} = useShoppingCart()
   return (
     <Navbar bg="light" variant="light" fixed="top" className="shadow" style={{height : ""}} expand="md">
         <Container>
@@ -20,7 +20,14 @@ function Navibar(){
               </div>
             
             </Nav.Link>
-            <Nav.Link href="/#/wishlist">Wishlist</Nav.Link>
+            <Nav.Link href="/#/wishlist">
+            Wishlist
+            <div className="cart-num">
+              {wishItems.reduce((value,item) => {
+                return (value+item.inWish)
+              }, 0)}
+              </div>
+            </Nav.Link>
             <Nav.Link href="/#/account">Account</Nav.Link>
         </Nav>  
       </Navbar.Collapse>  

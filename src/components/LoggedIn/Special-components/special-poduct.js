@@ -11,11 +11,14 @@ function SpecialProduct(props){
     
     const {
       getItemQuantity,
-      setIncrement
+      setIncrement,
+      addToWishlist,
+      inWishlist,
+      removeFromWishlist
     } = useShoppingCart()
     
     const quantity= getItemQuantity(props.product.id);
-
+    const inWish = inWishlist(props.product.id);
   return (
       <div className={className} style={{backgroundColor : props.product.color}}>
       <img className="special-pro" src={props.product.imgUrl} alt="img"/>
@@ -27,7 +30,11 @@ function SpecialProduct(props){
         {quantity === 0?
         <>
         <button className="btn btn-light" onClick={()=>{setIncrement(props.product.id)}} >Add to Cart</button>
-          <button className="btn btn-danger" onClick= {()=>alert("Wishlist " + props.product.Pname)} >Add to Wishlist</button>
+        {inWish === 1 ?
+            <Button variant="danger">Wishlisted</Button>
+            :
+          <button className="btn btn-danger" onClick= {()=>{addToWishlist(props.product.id)}} >Add to Wishlist</button>
+        }
         </>
           :
         <>

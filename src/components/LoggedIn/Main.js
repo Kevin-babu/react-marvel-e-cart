@@ -8,6 +8,7 @@ function createCard(product){
   
   return <Procard   
    product= {product}
+    
  />
  }
  
@@ -17,7 +18,7 @@ function Main(){
   return (
    <div className="main ">
     <Container className=" mb-3">
-        <Row className='row-cols-1 row-cols-md-3 g-4'>
+        <Row className='row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'>
           {Products.map(createCard)}
         </Row>
     </Container>
