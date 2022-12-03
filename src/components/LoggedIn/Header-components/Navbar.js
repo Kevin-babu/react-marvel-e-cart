@@ -11,7 +11,7 @@ function Navibar(){
           <Navbar.Toggle aria-controls="basic-navbar-nav" />  
           <Navbar.Collapse id="basic-navbar-nav">  
             <Nav className="ms-auto">  
-            <Nav.Link href="/cart">
+            <Nav.Link href="/#/cart">
             Cart
               <div className="cart-num">
               {cartItems.reduce((value,item) => {
@@ -20,8 +20,8 @@ function Navibar(){
               </div>
             
             </Nav.Link>
-            <Nav.Link href="/wishlist">Wishlist</Nav.Link>
-            <Nav.Link href="/account">Account</Nav.Link>
+            <Nav.Link href="/#/wishlist">Wishlist</Nav.Link>
+            <Nav.Link href="/#/account">Account</Nav.Link>
         </Nav>  
       </Navbar.Collapse>  
         </Container>
