@@ -15,9 +15,9 @@ function App(){
       <HashRouter>
         <Routes>
             <Route index element={<LoggedIn />} />
-            <Route exact path="/" element={<LoggedIn/>} />
-            <Route exact path="/cart" element={<Cart/>} />
-            <Route exact path="/wishlist" element={<Wishlist />} />
+            <Route exact path="/react-marvel-e-cart/" element={<LoggedIn/>} />
+            <Route exact path="//react-marvel-e-cart/#/cart" element={<Cart/>} />
+            <Route exact path="//react-marvel-e-cart/#/wishlist" element={<Wishlist />} />
             <Route exact path="/account" element={<Account />} />
         </Routes>
       </HashRouter>
