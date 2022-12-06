@@ -7,11 +7,11 @@ function Navibar(){
   return (
     <Navbar bg="light" variant="light" fixed="top" className="shadow" style={{height : ""}} expand="md">
         <Container>
-          <Navbar.Brand href="/react-marvel-e-cart/">MyShop</Navbar.Brand>
+          <Navbar.Brand href="/">MyShop</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />  
           <Navbar.Collapse id="basic-navbar-nav">  
             <Nav className="ms-auto">  
-            <Nav.Link href="/react-marvel-e-cart/#/cart">
+            <Nav.Link href="/#/cart">
             Cart
               <div className="cart-num">
               {cartItems.reduce((value,item) => {
@@ -20,7 +20,7 @@ function Navibar(){
               </div>
             
             </Nav.Link>
-            <Nav.Link href="/react-marvel-e-cart/#/wishlist">
+            <Nav.Link href="/#/wishlist">
             Wishlist
             <div className="cart-num">
               {wishItems.reduce((value,item) => {
