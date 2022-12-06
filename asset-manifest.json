@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-marvel-e-cart/static/css/main.17ac391b.css",
-    "main.js": "/react-marvel-e-cart/static/js/main.a227ecc7.js",
+    "main.js": "/react-marvel-e-cart/static/js/main.0609af84.js",
     "index.html": "/react-marvel-e-cart/index.html",
     "main.17ac391b.css.map": "/react-marvel-e-cart/static/css/main.17ac391b.css.map",
-    "main.a227ecc7.js.map": "/react-marvel-e-cart/static/js/main.a227ecc7.js.map"
+    "main.0609af84.js.map": "/react-marvel-e-cart/static/js/main.0609af84.js.map"
   },
   "entrypoints": [
     "static/css/main.17ac391b.css",
-    "static/js/main.a227ecc7.js"
+    "static/js/main.0609af84.js"
   ]
 }
