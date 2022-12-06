@@ -22,7 +22,7 @@ export default function Procard(props) {
   return (
     <Col>
       <Card style={{width: "20rem", color: "black"}} className="mb-3 shadow">
-        <Card.Img variant="top" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" className="main-img"/>
+        <Card.Img variant="top" src={props.product.imgUrl} className="main-img"/>
         <Card.Body>
           <Card.Title style={{color: 'black'}}>{props.product.Pname}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted" style={{fontSize: "1.2rem"}}>${props.product.Price}</Card.Subtitle>
@@ -50,3 +50,5 @@ export default function Procard(props) {
     
   )
 }
+
+// https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png

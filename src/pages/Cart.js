@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/LoggedIn/Header-components/Navbar';
 import CartCard from './CartCard';
 import Products from '../data/product-details';
+import MainProducts from '../data/ProductList';
 import { useShoppingCart } from '../context/CartContext';
 import { Container } from 'react-bootstrap';
 
@@ -47,7 +48,7 @@ export default function Cart() {
           <h1>Your Cart</h1>
           <div className='cart'>
           <hr/>
-            {Products.map(createCartCards)} 
+            {MainProducts.map(createCartCards)} 
               <span>Total price:</span><span className='tprice'>${totalPrice}</span>
           </div>
           </div>

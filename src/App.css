@@ -133,7 +133,10 @@ header {
   /* border: 1px solid black ; */
 
 }
-
+.main-img{
+  width: 20rem;
+  height: 210px;
+}
 
 
 
@@ -159,7 +162,7 @@ header {
 }
 .cart-card img{
   height: 100px;
-  width: 100px;
+  width: 150px;
 }
 
 .cart-card-disc {

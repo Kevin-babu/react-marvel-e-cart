@@ -4,7 +4,7 @@ import Products from '../data/product-details';
 import { Container, Row } from 'react-bootstrap';
 import { useShoppingCart } from '../context/CartContext';
 import { Card, Col, Button } from 'react-bootstrap';
-
+import MainProducts from '../data/ProductList';
 
 export default function Wishlist() {
 
@@ -18,7 +18,7 @@ function createWishCard(product){
       <div style={{marginTop : "100px", textAlign: "center"}}>
          <Col>
           <Card style={{width: "20rem", color: "black"}} className="mb-3 shadow">
-            <Card.Img variant="top" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" className="main-img"/>
+            <Card.Img variant="top" src={product.imgUrl} className="main-img"/>
             <Card.Body>
               <Card.Title style={{color: 'black'}}>{product.Pname}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted" style={{fontSize: "1.2rem"}}>${product.Price}</Card.Subtitle>
@@ -43,7 +43,7 @@ function createWishCard(product){
         <div>
         <Container className=" mb-3">
         <Row className='row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'>
-          {Products.map(createWishCard)}
+          {MainProducts.map(createWishCard)}
         </Row>
     </Container>
    </div> 
