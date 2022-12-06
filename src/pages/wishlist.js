@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/LoggedIn/Header-components/Navbar';
-import Products from '../data/product-details';
 import { Container, Row } from 'react-bootstrap';
 import { useShoppingCart } from '../context/CartContext';
 import { Card, Col, Button } from 'react-bootstrap';

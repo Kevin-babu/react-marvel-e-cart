@@ -1,6 +1,5 @@
 import React from "react";
 import { Container , Row} from "react-bootstrap";
-import Products from "../../data/product-details";
 import Procard from "./Main-components/card";
 import MainProducts from "../../data/ProductList";
 // import useLocalStorage from "../../hooks/useLocalStorage";
