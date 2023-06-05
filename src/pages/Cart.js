@@ -32,7 +32,7 @@ export default function Cart() {
     }}
     
    const totalPrice= cartItems.reduce((total, item) => {
-      const product= Products.find(pro => pro.id=== item.id )
+      const product= MainProducts.find(pro => pro.id=== item.id )
       return (total + (product.Price || 0)*item.quantity);
     }, 0)
 
